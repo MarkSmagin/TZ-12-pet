@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .maket{
+            display: grid;
+            /* Так задаются ширина строк и высота колонок */
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            /* Схлопывание колонок */
+            grid-template-areas: 'area-1 area-1 area-3'
+                'area-1 area-1 area-3'
+                'area-2 area-2 area-3';
+            /* Отступы */
+            grid-row-gap: 10px;
+            grid-column-gap: 20px;
+        }
+
+        .block{
+            background: violet;
+            border: 1px solid #000;
+        }
+
+        .block6{
+            grid-area: area-1;
+        }
+
+        .block3{
+            grid-area: area-2;
+        }
+
+        .block7{
+            /* Выравнивание по высоте */
+            align-self: center;
+            grid-area: area-3;
+        }
+
+        .block1{
+            /* Выравнивание по ширине */
+            justify-self: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="maket">
+        <div class="block block1">1</div>
+        <div class="block block2">2</div>
+        <div class="block block3">3</div>
+        <div class="block block4">4</div>
+        <div class="block block5">5</div>
+        <div class="block block6">6</div>
+        <div class="block block7">7</div>
+        <div class="block block8">8</div>
+    </div>
+</body>
+</html>
